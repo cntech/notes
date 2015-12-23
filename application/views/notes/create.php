@@ -5,23 +5,33 @@
 </div>
 
 <div>
-  <?php echo form_open('notes/create'); ?>
+  <?php echo form_open('notes/create', array('class' => 'uk-form uk-form-horizontal')); ?>
   
-  <div>
-    <label for="slug">URL ending</label>
-    <input type="text" name="slug">
+  <div class="uk-form-row">
+    <label class="uk-form-label" for="slug">URL ending</label>
+    <div class="uk-form-controls">
+      <input type="text" name="slug">
+    </div>
   </div>
   
-  <div>
-    <label for="title">Title</label>
-    <input type="text" name="title" value="<?php echo $note['title']; ?>">
+  <div class="uk-form-row">
+    <label class="uk-form-label" for="title">Title</label>
+    <div class="uk-form-controls">
+      <input type="text" name="title" value="<?php echo $note['title']; ?>">
+    </div>
   </div>
   
-  <div>
-    <label for="text">Text</label>
-    <textarea name="text"><?php echo $note['text']; ?></textarea>
+  <div class="uk-form-row">
+    <label class="uk-form-label" for="text">Text</label>
+    <div class="uk-form-controls">
+      <textarea name="text"><?php echo $note['text']; ?></textarea>
+    </div>
   </div>
   
-  <input type="submit" name="submit" value="Save Note">
+  <div class="uk-form-row">
+    <div class="uk-form-controls">
+      <button type="submit" class="uk-button uk-button-primary">Save Note</button>
+    </div>
+  </div>
   
 </div>
